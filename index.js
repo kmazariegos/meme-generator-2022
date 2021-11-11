@@ -9,10 +9,12 @@ document.addEventListener("submit", function(e){
 
     //this create the x next to meme
     let removeButton = document.createElement("button");
-    removeButton.innerText = "X";
+    removeButton.className = "delete-button"
+    removeButton.innerText = "Delete Meme";
 
     //this create the meme
     let newMeme = document.createElement("div") //creates div of meme
+    newMeme.className = "your-meme"
     let newMemeImage = document.createElement("img") //create img element of meme
     newMeme.innerText = document.getElementById('meme-caption').value //add the caption
 
@@ -21,6 +23,8 @@ document.addEventListener("submit", function(e){
     memeHolder.appendChild(newMeme)
     newMeme.appendChild(newMemeImage)
     newMeme.appendChild(removeButton);
+
+    console.log(newMeme, "this is your MEME")
 
 
     //here is where you can delete the meme
